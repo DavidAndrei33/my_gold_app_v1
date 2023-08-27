@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adăugare Date</title>
+</head>
+<body>
+    <h1>Adăugați date despre piața aurului</h1>
+    <form action="/add_data" method="post">
+        Data: <input type="date" name="date" required><br>
+        Preț: <input type="number" name="price" step="0.01" required><br>
+        Volum: <input type="number" name="volume" required><br>
+        <input type="submit" value="Adaugă">
+    </form>
+    <form action="/add_data" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.date.label }}: {{ form.date }}<br>
+        {{ form.price.label }}: {{ form.price }}<br>
+        {{ form.volume.label }}: {{ form.volume }}<br>
+        {{ form.asset_type.label }}: {{ form.asset_type }}<br>
+        <input type="submit" value="Adaugă date">
+    </form>
+    
+</body>
+</html>

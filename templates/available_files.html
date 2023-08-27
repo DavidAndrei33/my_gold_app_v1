@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Files</title>
+</head>
+<body>
+    <h1>Available Files</h1>
+    <ul>
+        {% for pair, timeframes in available_data.items() %}
+            <li>{{ pair }}: {{ timeframes | join(', ') }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

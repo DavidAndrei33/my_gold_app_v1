@@ -1,0 +1,2 @@
+$env:PYTHONPATH="D:\GitHub\my_gold_app" in terminal
+set PYTHONPATH=%cd%

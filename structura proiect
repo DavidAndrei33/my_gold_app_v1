@@ -1,0 +1,99 @@
+D:.
+│   app.py
+│   config.py
+│   requirements.txt
+│   __init__.py
+│
+├───backups
+│       analysis_routes_backup.py
+│       copyedit.py
+│
+├───bugs and solve
+│       Set_pythonpath
+│
+├───data
+│   │   eur_usd_data.csv
+│   │   forex_news.xlsx
+│   │   __init__.py
+│   │
+│   └───xau
+│       └───usd
+│               30m.csv
+│               5m.csv
+│
+├───data_extraction
+│       geckodriver.log
+│       scraping_marketwatch.py
+│       __init__.py
+│
+│
+├───models
+│   │   market_data.py
+│   │   __init__.py
+│   │
+│   └───__pycache__
+│           gold_data.cpython-311.pyc
+│           market_data.cpython-311.pyc
+│           __init__.cpython-311.pyc
+│
+├───routes
+│   │   aa
+│   │   analysis_routes.py
+│   │   economic_news_form.py
+│   │   financial_routes.py
+│   │   forms.py
+│   │   main_routes.py
+│   │   __init__.py
+│   │
+│   └───__pycache__
+│           analysis_routes.cpython-311.pyc
+│           financial_routes.cpython-311.pyc
+│           forms.cpython-311.pyc
+│           main_routes.cpython-311.pyc
+│           __init__.cpython-311.pyc
+│
+├───services
+│   │   analysis_service.py
+│   │   to do
+│   │   __init__.py
+│   │
+│   └───__pycache__
+│           analysis_service.cpython-311.pyc
+│           __init__.cpython-311.pyc
+│
+├───static
+│   │   interfata grafica
+│   │   __init__.py
+│   │   
+│   ├───css
+│   │       styles.css
+│   │
+│   └───js
+│           chat.js
+│
+├───technical_analysis
+│   │   candlestick_patterns.py
+│   │   detect_candlestick_patterns.py
+│   │   forecasting.py
+│   │   indicators.py
+│   │   plotting.py
+│   │   __init__.py
+│   │
+│   └───__pycache__
+│           candlestick_patterns.cpython-311.pyc
+│           detect_candlestick_patterns.cpython-311.pyc
+│           __init__.cpython-311.pyc
+│
+├───templates
+│       add_data.html
+│       add_instrument.html
+│       add_news.html
+│       analysis_view.html
+│       index.html
+│
+├───tests
+│       test_plot.py
+│       __init__.py
+│
+├───utils
+│       __init__.py

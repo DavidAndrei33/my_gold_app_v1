@@ -1,0 +1,20 @@
+from flask import Flask, render_template
+from pymongo import MongoClient
+from routes.forms import AnalysisForm
+from services.analysis_service import analyze_and_get_data
+from routes.analysis_routes import analysis_routes
+from routes.main_routes import main_routes
+from config import MONGODB_URI
+
+app = Flask(__name__)
+app.config.from_object("config")
+
+client = MongoClient(app.config["MONGODB_URI"])
+db = client.gold_db  # sau orice alt nume doriți pentru baza de date
+app.register_blueprint(analysis_routes)
+
+
+app.register_blueprint(main_routes)
+
+if __name__ == "__main__":
+    app.run()

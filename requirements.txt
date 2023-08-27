@@ -1,0 +1,10 @@
+flask
+flask_wtf
+matplotlib
+mplfinance
+pandas
+pandas_ta
+pymongo
+requests
+wtforms
+pip install plotly dash dash-bootstrap-components

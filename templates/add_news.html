@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Introduceți știrile</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.news_content.label }}<br>
+        {{ form.news_content(rows=10, cols=40) }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+{% endblock %}

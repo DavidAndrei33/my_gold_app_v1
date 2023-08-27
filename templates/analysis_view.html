@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/chat.js') }}" defer></script>
+</head>
+<body>
+    <div id="analysis_container">
+        <!-- Casetele de selectare pentru perechile valutare și timeframes -->
+        <label for="pairs_select">Selectează Perechea:</label>
+        <select id="pairs_select"></select>
+        
+        <label for="timeframes_select">Selectează Timeframe:</label>
+        <select id="timeframes_select"></select>
+
+        <button id="analyzeButton">Analyze</button>
+
+        <!-- Locul în care graficul va fi afișat -->
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <script>
+        // Funcție pentru a popula dropdown-ul cu pair-uri
+        function populatePairs() {
+            fetch('/financial/available_pairs')
+                .then(response => response.json())
+                .then(data => {
+                    let select = document.getElementById('pairs_select');
+                    data.forEach(pair => {
+                        let option = document.createElement('option');
+                        option.value = pair;
+                        option.innerText = pair;
+                        select.appendChild(option);
+                    });
+                });
+        }
+
+        // Funcție pentru a popula dropdown-ul cu timeframe-uri
+        function populateTimeframes(pair) {
+            fetch(`/financial/available_timeframes/${pair}`)
+                .then(response => response.json())
+                .then(data => {
+                    let select = document.getElementById('timeframes_select');
+                    select.innerHTML = '';  // Golim conținutul existent
+                    data.forEach(timeframe => {
+                        let option = document.createElement('option');
+                        option.value = timeframe;
+                        option.innerText = timeframe;
+                        select.appendChild(option);
+                    });
+                });
+        }
+
+        // Adaugă un event listener pentru schimbarea valorii dropdown-ului de pair-uri
+        document.getElementById('pairs_select').addEventListener('change', function() {
+            populateTimeframes(this.value);
+        });
+
+        // Adaugă un event listener pentru butonul "Analyze"
+        document.getElementById('analyzeButton').addEventListener('click', function() {
+            // Aici veți chema funcția care va genera graficul pe baza selecțiilor făcute
+            // De exemplu:
+            // analyzeData();
+        });
+
+        // Populează dropdown-ul cu pair-uri la încărcarea paginii
+        populatePairs();
+    </script>
+</body>
+</html>

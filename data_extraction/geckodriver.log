@@ -1,0 +1,118 @@
+1692820059589	geckodriver	INFO	Listening on 127.0.0.1:63887
+1692820062631	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63888" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\david\\AppData\\Local\\Temp\\rust_mozprofileRqoQta"
+1692820107815	geckodriver	INFO	Listening on 127.0.0.1:63965
+1692820110887	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63966" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\david\\AppData\\Local\\Temp\\rust_mozprofileIitYVy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692820111639	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692820111719	Marionette	INFO	Listening on port 63974
+WebDriver BiDi listening on ws://127.0.0.1:63966
+Read port: 63974
+1692820111976	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63966/devtools/browser/534425c4-f4fe-441b-bf32-7c22846fc8ca
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 599))
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/H7NiGUBWITXDbUXvzcl9NdwFkmo5ojjKC-Hhm2BY16o.js line 2 > eval line 6662 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1692820134312	Marionette	INFO	Stopped listening on port 63974
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/actors/ContentMetaChild.sys.mjs, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1692820332063	geckodriver	INFO	Listening on 127.0.0.1:64378
+1692820335112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64379" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\david\\AppData\\Local\\Temp\\rust_mozprofileUU5U50"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692820335524	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692820335613	Marionette	INFO	Listening on port 64386
+WebDriver BiDi listening on ws://127.0.0.1:64379
+Read port: 64386
+1692820335899	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64379/devtools/browser/60fbaae0-c070-4379-b8f4-7a0fb3ce20ef
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 599))
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/H7NiGUBWITXDbUXvzcl9NdwFkmo5ojjKC-Hhm2BY16o.js line 2 > eval line 3195 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/H7NiGUBWITXDbUXvzcl9NdwFkmo5ojjKC-Hhm2BY16o.js line 2 > eval line 4959 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/H7NiGUBWITXDbUXvzcl9NdwFkmo5ojjKC-Hhm2BY16o.js line 2 > eval line 4489 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 599))
+1692820401702	Marionette	INFO	Stopped listening on port 64386
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1692880046818	geckodriver	INFO	Listening on 127.0.0.1:53021
+1692880049908	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53022" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\david\\AppData\\Local\\Temp\\rust_mozprofileqwadOd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692880050667	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692880050781	Marionette	INFO	Listening on port 53030
+Read port: 53030
+WebDriver BiDi listening on ws://127.0.0.1:53022
+1692880050900	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53022/devtools/browser/60182cec-b6a8-4077-b050-edb46f60bc60
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 599))
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-jd_BcJ2_muHebna6aM-t4BwAJqN83NnF3hDm83RPZ4.js line 2 > eval line 7376 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/dowjonesheader64568365681/moatheader.js, line 399: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-jd_BcJ2_muHebna6aM-t4BwAJqN83NnF3hDm83RPZ4.js line 2 > eval line 5742 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-jd_BcJ2_muHebna6aM-t4BwAJqN83NnF3hDm83RPZ4.js line 2 > eval line 2533 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1692880093242	Marionette	INFO	Stopped listening on port 53030
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1692882095691	geckodriver	INFO	Listening on 127.0.0.1:54127
+1692882098731	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54128" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\david\\AppData\\Local\\Temp\\rust_mozprofilel5UVs6"
+1692883442140	geckodriver	INFO	Listening on 127.0.0.1:54281
+1692883445204	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54282" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\david\\AppData\\Local\\Temp\\rust_mozprofileWYOfcB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692883445854	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692883445949	Marionette	INFO	Listening on port 54290
+WebDriver BiDi listening on ws://127.0.0.1:54282
+Read port: 54290
+1692883446170	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54282/devtools/browser/c18240b9-83f2-4055-9736-24c25f3b07d6
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1692883452041	Marionette	INFO	Stopped listening on port 54290
+Dynamically enable window occlusion 1
+[Parent 20824, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 9668, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 20824, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 9668, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 20824, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 9668, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 20824, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 9668, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 20824, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 9668, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 20824, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 9668, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443

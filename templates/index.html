@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Financial Analysis Chatbot</title>
+</head>
+<body>
+    <div class="dropdown-container">
+        <label for="currency-pair">Select Currency Pair:</label>
+        <select id="currency-pair">
+            <!-- Opțiunile vor fi adăugate dinamic aici -->
+         <!-- Add more currency pairs as needed -->
+        </select>
+
+        <label for="time-frame">Select Time Frame:</label>
+        <select id="time-frame">
+            <option value="1H">1 Hour</option>
+            <option value="1D">1 Day</option>
+            <!-- Add more time frames as needed -->
+        </select>
+
+        <button onclick="showAnalysis()">Show Analysis</button>
+    </div>
+    
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Financial Analysis Chatbot</h3>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be displayed here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="static/js/chat.js"></script>
+</body>
+</html>

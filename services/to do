@@ -1,0 +1,27 @@
+Alegerea tipului de diagramă depinde de natura și structura datelor pe care dorești să le vizualizezi, precum și de informația pe care dorești să o transmiți cu acea vizualizare. Bazat pe workflow-ul pe care l-am discutat și structura proiectului, aici sunt câteva tipuri de diagrame care ar putea fi relevante pentru setul tău de date:
+
+1. **Diagrame liniare (Line Charts)**: 
+   - Utilizate în principal pentru a arăta evoluția unei valori în timp.
+   - Sunt excelente pentru vizualizarea datelor de preț pentru aur sau alte instrumente financiare de-a lungul timpului.
+
+2. **Diagrame cu lumânări (Candlestick Charts)**:
+   - Acest tip de diagramă este foarte popular în analiza tehnică a piețelor financiare.
+   - Oferă informații despre prețul de deschidere, închidere, maxim și minim pentru o anumită perioadă.
+
+3. **Diagrame cu bare (Bar Charts sau Histograms)**:
+   - Pot fi folosite pentru a vizualiza distribuția anumitor valori sau pentru a compara diferite categorii de date.
+   - Ar putea fi utile pentru a arăta distribuția frecvenței anumitor evenimente sau indicatori.
+
+4. **Diagrame pie (Pie Charts)**:
+   - Bun pentru a arăta distribuția procentuală a unor categorii într-un set de date.
+   - De exemplu, poți arăta proporția diferitelor tipuri de evenimente sau știri și impactul lor asupra prețului.
+
+5. **Heatmaps**:
+   - Pot fi folosite pentru a vizualiza matrice de corelație sau alte tipuri de matrice de date.
+   - De exemplu, pentru a arăta corelația dintre diferiți indicatori sau evenimente și mișcările de preț.
+
+6. **Diagrame scatter (Scatter Plots)**:
+   - Excelente pentru a vizualiza relația dintre două variabile.
+   - De exemplu, poți compara impactul a două evenimente diferite asupra prețului.
+
+Dacă îmi oferi mai multe detalii despre datele tale și ce anume vrei să vizualizezi sau să analizezi, pot oferi recomandări mai specifice.
