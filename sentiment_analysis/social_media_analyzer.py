@@ -1,0 +1,1 @@
+#social_media_analyzer.py: Include funcții pentru analiza sentimentului pe rețelele sociale."

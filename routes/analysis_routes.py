@@ -6,6 +6,8 @@ from dash import dcc, html
 import plotly.graph_objects as go
 import pandas as pd
 from services.analysis_service import analyze_and_get_data, get_available_data_complete
+import sys, os
+sys.path.append('D:/GitHub/my_gold_app') # De exemplu, ''
 
 analysis_routes = Blueprint('analysis_routes', __name__)
 
@@ -101,7 +103,7 @@ def get_analysis():
     instrument = data['instrument']
     timeframe = data['timeframe']    
     # Procesarea datelor și realizarea analizei tehnice
-    result = analyze_and_get_data(instrument, granularity, start_date, end_date, data['indicators'])
+    result = analyze_and_get_data(instrument, data['indicators'])
     
     # Generarea graficului cu modelele de lumânări
     fig = go.Figure(data=[go.Candlestick(

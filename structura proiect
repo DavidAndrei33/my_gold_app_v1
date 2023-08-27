@@ -1,7 +1,15 @@
 D:.
 │   app.py
+│   apppy.txt
 │   config.py
+│   interfata analiza
+│   package-lock.json
+│   package.json
+│   README.md
 │   requirements.txt
+│   structura proiect
+│   v1.zip
+│   v2_integrare_chatgpt.zip
 │   __init__.py
 │
 ├───backups
@@ -9,23 +17,54 @@ D:.
 │       copyedit.py
 │
 ├───bugs and solve
+│       bugs
 │       Set_pythonpath
+│
+├───chromedriver_win32
+│       chromedriver.exe
+│       LICENSE.chromedriver
+│       __init__.py
 │
 ├───data
 │   │   eur_usd_data.csv
 │   │   forex_news.xlsx
 │   │   __init__.py
 │   │
-│   └───xau
-│       └───usd
-│               30m.csv
-│               5m.csv
+│   ├───gbp-usd
+│   │       30m.csv
+│   │
+│   └───xau-usd
+│           30m.csv
+│           5m.csv
 │
 ├───data_extraction
 │       geckodriver.log
 │       scraping_marketwatch.py
 │       __init__.py
 │
+├───Documentatie
+│   │   26.08.2023lucru
+│   │   adaugare de baza de date
+│   │   etape
+│   │   expectations_requirements.txt
+│   │   extractie date info
+│   │   Fisa Tehnica.txt
+│   │   implementare functie analiza
+│   │   interfata cu utilizatorul
+│   │   In_Lucru
+│   │   nnote_blank
+│   │   predictie
+│   │   Predictie_XAU_USD_Model.xlsx
+│   │   SDLC
+│   │   Structura_def
+│   │   Sugestii.txt
+│   │   to do list
+│   │   U.S. Economic Calendar - MarketWatch.html
+│   │   workflow
+│   │
+│   └───testare module extractie informaatii
+│           extractie chart live.py
+│           scraping marketwatch.py
 │
 ├───models
 │   │   market_data.py
@@ -37,7 +76,6 @@ D:.
 │           __init__.cpython-311.pyc
 │
 ├───routes
-│   │   aa
 │   │   analysis_routes.py
 │   │   economic_news_form.py
 │   │   financial_routes.py
@@ -52,6 +90,12 @@ D:.
 │           main_routes.cpython-311.pyc
 │           __init__.cpython-311.pyc
 │
+├───sentiment_analysis
+│       news_scraper.py
+│       sentiment_analyzer.py
+│       social_media_analyzer.py
+│       __init__.py
+│
 ├───services
 │   │   analysis_service.py
 │   │   to do
@@ -64,10 +108,10 @@ D:.
 ├───static
 │   │   interfata grafica
 │   │   __init__.py
-│   │   
+│   │
 │   ├───css
 │   │       styles.css
-│   │
+│   │       
 │   └───js
 │           chat.js
 │
@@ -75,6 +119,7 @@ D:.
 │   │   candlestick_patterns.py
 │   │   detect_candlestick_patterns.py
 │   │   forecasting.py
+│   │   generaregrafi.py
 │   │   indicators.py
 │   │   plotting.py
 │   │   __init__.py
@@ -84,11 +129,19 @@ D:.
 │           detect_candlestick_patterns.cpython-311.pyc
 │           __init__.cpython-311.pyc
 │
+├───technical_indicators
+│       macd.py
+│       moving_average.py
+│       rsi.py
+│       stochastic.py
+│       __init__.py
+│
 ├───templates
 │       add_data.html
 │       add_instrument.html
 │       add_news.html
 │       analysis_view.html
+│       available_files.html
 │       index.html
 │
 ├───tests
@@ -97,3 +150,6 @@ D:.
 │
 ├───utils
 │       __init__.py
+│
+└───__pycache__
+        config.cpython-311.pyc

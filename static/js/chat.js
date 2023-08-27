@@ -53,7 +53,6 @@ function analyzeData() {
             body: JSON.stringify({
                 instrument: selectedInstrument,
                 timeframe: selectedTimeframe
-                
             })
         }).then(response => response.json()).then(data => {
             // Handle the response data here
@@ -175,4 +174,4 @@ document.getElementById('pairs_select').addEventListener('change', function()
 populatePairs();
 
 // Apelați funcția la încărcarea paginii
-window.onload = loadAvailablePairs: 
+window.onload = loadAvailablePairs;
