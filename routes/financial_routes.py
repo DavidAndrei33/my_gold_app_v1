@@ -1,8 +1,8 @@
-from flask import Blueprint, jsonify, current_app as app
+from flask import Blueprint, jsonify
 from flask_pymongo import PyMongo
 from analysis import apply_strategy
 import os
-
+from flask import current_app 
 financial_routes = Blueprint('financial', __name__)
 
 

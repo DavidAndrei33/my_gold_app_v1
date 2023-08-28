@@ -127,3 +127,5 @@ def get_analysis():
 'https://www.cashbackforex.com/live-chart/datafeed/bars?symbol=CBOE:RUT?symbol=CBOE-RUT&resolution=30&from=1692575722&to=1693167922&countback=329'
 
 https://www.cashbackforex.com/live-chart/datafeed/bars?symbol=CBOE:RUT&resolution=30&from=1692575722&to=1693167922&countback=329
+
+
