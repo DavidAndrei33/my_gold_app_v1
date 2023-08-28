@@ -69,3 +69,4 @@ def add_news():
         news = form.news_content.data
         return redirect(url_for('main_routes.index'))
     return render_template('add_news.html', form=form)
+
