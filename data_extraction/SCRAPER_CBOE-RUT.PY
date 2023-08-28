@@ -5,8 +5,8 @@ import os
 # Solicită timeframe-ul
 timeframe = input("Introduceți timeframe-ul (de ex. 5m, 15m, 30m, 60m): ")
 
-# Construiește URL-ul complet pentru CBOE:RUT folosind linkul oferit de dvs.
-url = f"https://www.cashbackforex.com/live-chart/datafeed/bars?symbol=CBOE:RUT&resolution={timeframe}&from=1692575722&to=1693167922&countback=329"
+# Construiește URL-ul complet pentru IC MARKETS:10012 folosind linkul oferit de dvs.
+url = f"https://www.cashbackforex.com/live-chart/datafeed/bars?symbol=IC%20MARKETS:10012&resolution={timeframe}&from=1692631500&to=1693223700&countback=330"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -28,7 +28,7 @@ if response.status_code == 200:
     print(df.columns)
 
     # Înlocuim ':' cu '_' pentru a evita eroarea
-    directory_name = 'CBOE_RUT'
+    directory_name = 'IC_MARKETS_10012'
     directory = f'my_gold_app/my_gold_app/my_gold_app/data/{directory_name}'
 
     # Verificăm dacă rădăcina căii există, dacă nu, o creăm
