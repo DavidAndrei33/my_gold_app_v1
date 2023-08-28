@@ -7,33 +7,39 @@
     <title>Financial Analysis Chatbot</title>
 </head>
 <body>
-    <div class="dropdown-container">
-        <label for="currency-pair">Select Currency Pair:</label>
-        <select id="currency-pair">
-            <!-- Opțiunile vor fi adăugate dinamic aici -->
-         <!-- Add more currency pairs as needed -->
-        </select>
+    <div class="container">
+        <!-- Secțiunea de analiză -->
+        <div class="analysis-section">
+            <h2>Analiză</h2>
+            
+            <label for="currency-pair">Selectează Perechea:</label>
+            <select id="currency-pair">
+                {% for pair in currency_pairs %}
+                    <option value="{{ pair }}">{{ pair }}</option>
+                {% endfor %}
+            </select>
 
-        <label for="time-frame">Select Time Frame:</label>
-        <select id="time-frame">
-            <option value="1H">1 Hour</option>
-            <option value="1D">1 Day</option>
-            <!-- Add more time frames as needed -->
-        </select>
+            <label for="time-frame">Selectează Time Frame:</label>
+            <select id="time-frame">
+                <!-- Opțiunile vor fi adăugate dinamic aici -->
+            </select>
 
-        <button onclick="showAnalysis()">Show Analysis</button>
-    </div>
-    
-    <div class="chat-container">
-        <div class="chat-header">
-            <h3>Financial Analysis Chatbot</h3>
+            <button onclick="startAnalysis()">Analizează</button>
+            <button onclick="showAnalysis()">Afișează Analiza</button>
         </div>
-        <div class="chat-messages" id="chat-messages">
-            <!-- Messages will be displayed here -->
-        </div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button onclick="sendMessage()">Send</button>
+
+        <!-- Secțiunea de chat -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Financial Analysis Chatbot</h3>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be displayed here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
     </div>
 

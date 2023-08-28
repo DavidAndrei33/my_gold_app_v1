@@ -7,14 +7,22 @@ from routes.analysis_routes import analysis_routes
 from routes.main_routes import main_routes
 from routes.financial_routes import financial_routes
 from routes.analysis_routes import analysis_routes
-
+import os
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = MONGO_URI
 mongo = PyMongo(app)
 
-# Set OpenAI API key
-openai.api_key = OPENAI_API_KEY
+
+
+def get_available_currency_pairs():
+    # Aici ar trebui să interoghezi baza de date sau sursa de date pentru a obține lista de perechi valutare
+    return ["USD/EUR", "USD/GBP", "USD/JPY"]  # Exemplu de listă
+
+@app.route('/')
+def index():
+    currency_pairs = get_available_currency_pairs()
+    return render_template('index.html', currency_pairs=currency_pairs)
 
 # Load pre-trained model and tokenizer once for distilgpt2
 tokenizer = GPT2Tokenizer.from_pretrained("distilgpt2")
@@ -49,3 +57,17 @@ app.register_blueprint(analysis_routes)
 app.register_blueprint(financial_routes, url_prefix='/financial')
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+@app.route('/get-data-folders')
+def get_data_folders():
+    base_path = os.path.join(os.getcwd(), 'data')
+    currency_pairs = [folder for folder in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, folder))]
+    return {"currency_pairs": currency_pairs}
+
+@app.route('/get-time-frames/<currency_pair>')
+def get_time_frames(currency_pair):
+    base_path = os.path.join(os.getcwd(), 'data', currency_pair)
+    time_frames = [file.split('.')[0] for file in os.listdir(base_path) if file.endswith('.csv')]
+    return {"time_frames": time_frames}

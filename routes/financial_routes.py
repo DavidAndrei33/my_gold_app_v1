@@ -4,11 +4,10 @@ import os
 
 financial_routes = Blueprint('financial', __name__)
 
-DATA_PATH = os.path.join(current_app.root_path, 'data')
-
 
 @financial_routes.route('/available_pairs', methods=['GET'])
 def available_pairs():
+    DATA_PATH = os.path.join(current_app.root_path, 'data')
     pairs = []
     for root, dirs, files in os.walk(DATA_PATH):
         for dir_name in dirs:
@@ -21,6 +20,7 @@ def available_pairs():
 
 @financial_routes.route('/available_timeframes/<pair>', methods=['GET'])
 def available_timeframes(pair):
+    DATA_PATH = os.path.join(current_app.root_path, 'data')
     timeframes = []
     pair_path = os.path.join(DATA_PATH, pair)
     for root, dirs, files in os.walk(pair_path):
