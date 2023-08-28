@@ -1,5 +1,6 @@
-from flask import Blueprint, jsonify, current_app
+from flask import Blueprint, jsonify, current_app as app
 from flask_pymongo import PyMongo
+from analysis import apply_strategy
 import os
 
 financial_routes = Blueprint('financial', __name__)
@@ -29,3 +30,13 @@ def available_timeframes(pair):
                 timeframes.append(file_name.replace('.csv', ''))
     # Acest exemplu va returna toate fișierele .csv din directorul specificat al perechii ca fiind timeframe-uri disponibile.
     return jsonify(timeframes)
+
+@financial_routes.route('/analyze')
+def analyze():
+    pair = request.args.get('pair')
+    timeframe = request.args.get('timeframe')
+    
+    result = apply_strategy(pair, timeframe)
+    
+    # Aici poți procesa rezultatele și returna un răspuns către interfața grafică
+    return jsonify(result.tail(10).to_dict(orient="records"))

@@ -28,6 +28,17 @@ function populateTimeframes(pair) {
             });
         });
 }
+document.getElementById("analyze-btn").addEventListener("click", function() {
+    const selected_pair = document.getElementById("currency-pair").value;
+const selected_timeframe = document.getElementById("time-frame").value;
+
+fetch(`/analyze?pair=${selected_pair}&timeframe=${selected_timeframe}`)
+    .then(response => response.json())
+    .then(data => {
+        // Aici poți afișa rezultatele analizei în interfața grafică
+    });
+
+});
 
 // Adaugă un event listener pentru schimbarea valorii dropdown-ului de pair-uri
 document.getElementById('currency-pair').addEventListener('change', function() {
