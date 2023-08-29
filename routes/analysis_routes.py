@@ -1,17 +1,15 @@
 from flask import Blueprint, render_template, request
-from services.analysis_service import analyze_and_get_data
-from .forms import AnalysisForm
 import dash
 from dash import dcc, html
 import plotly.graph_objects as go
 import pandas as pd
 from services.analysis_service import analyze_and_get_data, get_available_data_complete
 import sys, os
-sys.path.append('D:/GitHub/my_gold_app') # De exemplu, ''
+from .forms import AnalysisForm
+
+sys.path.append('D:/GitHub/my_gold_app')  # De exemplu, ''
 
 analysis_routes = Blueprint('analysis_routes', __name__)
-
-@analysis_routes.route('/analyze', methods=['GET', 'POST'])
 
 @analysis_routes.route('/available_files', methods=['GET'])
 def available_files():
@@ -23,8 +21,9 @@ def available_files():
         if os.path.isfile(os.path.join(data_path, file)):
             available_files.append(file)
 
-    return render_template('available_files.html', available_files=available_files)
+    return render_template('available_files.html', available_data=available_files)
 
+@analysis_routes.route('/analyze', methods=['GET', 'POST'])
 def analyze():
     form = AnalysisForm()
     available_pairs = get_available_data_complete()  # Obține perechile valutare disponibile
@@ -49,7 +48,6 @@ def analyze():
         return render_template('analysis_view.html', result=result)
 
     return render_template('analysis.html', form=form, available_pairs=available_pairs)
-print("Analysis service module loaded!")
 
 def create_candlestick_chart(result):
     # Datele necesare pentru construirea graficului
@@ -88,13 +86,8 @@ def create_candlestick_chart(result):
     return candlestick_fig
 
 def save_results_to_file(result):
-       # Creați aici codul pentru salvarea rezultatelor într-un fișier CSV sau Excel
-    # Utilizați biblioteca pandas pentru a crea un DataFrame și a-l salva în fișier
-    
     df = pd.DataFrame(result)  # Exemplu: rezultatele sunt stocate într-un dicționar
     df.to_csv('analysis_results.csv', index=False)  # Salvare în fișier CSV
-
-    # Alternativ, puteți utiliza df.to_excel pentru salvare în Excel
 
 @analysis_routes.route('/get_analysis', methods=['POST'])
 def get_analysis():
@@ -116,8 +109,6 @@ def get_analysis():
         decreasing_line_color='red'
     )])
 
-    # Adăugați aici cod pentru evidențierea modelelor de lumânări detectate
-    
     # Actualizați aspectul graficului
     fig.update_layout(
         title='Candlestick Chart with Candlestick Patterns',
@@ -135,3 +126,4 @@ def get_analysis():
 
     return render_template('analysis_view.html', result=result)
 
+print("Analysis service module loaded!")

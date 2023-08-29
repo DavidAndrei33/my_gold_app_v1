@@ -3,6 +3,8 @@ from flask_pymongo import PyMongo
 from analysis import apply_strategy
 import os
 from flask import current_app 
+from .analysis_routes import analysis_routes
+
 financial_routes = Blueprint('financial', __name__)
 
 

@@ -1,17 +1,34 @@
 // Funcție pentru a popula dropdown-ul cu pair-uri
 function populatePairs() {
     fetch('http://127.0.0.1:5000/financial/available_pairs')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
-            let select = document.getElementById('currency-pair');
-            data.pairs.forEach(pair => {
-                let option = document.createElement('option');
-                option.value = pair;
-                option.innerText = pair;
-                select.appendChild(option);
-            });
+            if (data && Array.isArray(data.pairs)) {
+                let select = document.getElementById('currency-pair');
+                if (select) {
+                    data.pairs.forEach(pair => {
+                        let option = document.createElement('option');
+                        option.value = pair;
+                        option.innerText = pair;
+                        select.appendChild(option);
+                    });
+                } else {
+                    console.error('Element with id "currency-pair" not found');
+                }
+            } else {
+                console.error('Data format is unexpected', data);
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error.message);
         });
 }
+
 
 // Funcție pentru a popula dropdown-ul cu timeframe-uri
 function populateTimeframes(pair) {
