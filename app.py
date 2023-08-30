@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_pymongo import PyMongo
 import openai
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
-from config import MONGO_URI, OPENAI_API_KEY
+from config import MONGO_URI, OPENAI_API_KEY,SECRET_KEY
 from routes.analysis_routes import analysis_routes
 from routes.main_routes import main_routes
 from routes.financial_routes import financial_routes
@@ -11,6 +11,7 @@ import os
 app = Flask(__name__)
 app.config["MONGO_URI"] = MONGO_URI
 mongo = PyMongo(app)
+app.config['SECRET_KEY'] = SECRET_KEY
 
 def get_available_currency_pairs():
     base_path = os.path.join(os.getcwd(), 'data')
@@ -54,9 +55,11 @@ def get_data_folders():
 
 @app.route('/get-time-frames/<currency_pair>')
 def get_time_frames(currency_pair):
+    
     base_path = os.path.join(os.getcwd(), 'data', currency_pair)
     time_frames = [file.split('.')[0] for file in os.listdir(base_path) if file.endswith('.csv')]
     return {"time_frames": time_frames}
+
 
 if __name__ == '__main__':
     app.run(debug=True)

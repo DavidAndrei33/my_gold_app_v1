@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 # Configurare conexiune cu baza de date MongoDB
 client = MongoClient('mongodb://localhost:27017/')
-db = client.my_gold_app_db
+db = client.my_gold_app_db.historical_data
 instruments_collection = db.instruments
 historical_data_collection = db.historical_data
 

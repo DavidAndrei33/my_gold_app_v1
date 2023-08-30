@@ -47,7 +47,8 @@ def analyze():
         
         return render_template('analysis_view.html', result=result)
 
-    return render_template('analysis.html', form=form, available_pairs=available_pairs)
+    return render_template('analysis_view.html', form=form, available_pairs=available_pairs)
+
 
 def create_candlestick_chart(result):
     # Datele necesare pentru construirea graficului
@@ -93,10 +94,21 @@ def save_results_to_file(result):
 def get_analysis():
     # Extragerea datelor din cererea POST
     data = request.get_json()
-    instrument = data['instrument']
-    timeframe = data['timeframe']    
+    print("Datele primite în cererea POST: ", data)
+
+    # Verificarea dacă cheile 'currency_pair' și 'time_frame' există în 'data'
+    if 'currency_pair' not in data or 'time_frame' not in data:
+        return "Cheile 'currency_pair' și/sau 'time_frame' nu au fost găsite în date", 400  # 400 Bad Request
+
+    currency_pair = data['currency_pair']
+    time_frame = data['time_frame']
+
+    # Aici presupun că 'indicators' ar trebui să fie și el în 'data'; dacă nu, adaugă o verificare similară
+    if 'indicators' not in data:
+        return "Cheia 'indicators' nu a fost găsită în date", 400  # 400 Bad Request
+
     # Procesarea datelor și realizarea analizei tehnice
-    result = analyze_and_get_data(instrument, data['indicators'])
+    result = analyze_and_get_data(currency_pair, data['indicators'])
     
     # Generarea graficului cu modelele de lumânări
     fig = go.Figure(data=[go.Candlestick(
