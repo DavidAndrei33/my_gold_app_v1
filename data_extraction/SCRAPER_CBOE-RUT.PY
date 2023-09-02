@@ -6,7 +6,7 @@ import os
 timeframe = input("Introduceți timeframe-ul (de ex. 5m, 15m, 30m, 60m): ")
 
 # Construiește URL-ul complet pentru IC MARKETS:10012 folosind linkul oferit de dvs.
-url = f"https://www.cashbackforex.com/live-chart/datafeed/bars?symbol=IC%20MARKETS:10012&resolution={timeframe}&from=1692631500&to=1693223700&countback=330"
+url = f"https://www.cashbackforex.com/live-chart/datafeed/bars?symbol=IC%20MARKETS:10012&resolution={timeframe}&from=1693329542&to=1693428242&countback=329"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -18,7 +18,7 @@ response = requests.get(url, headers=headers)
 if response.status_code == 200:
     data = response.json()
     
-    # Creăm un DataFrame din date
+    # Creăm un DataFrame din date30
     df = pd.DataFrame(data)
     
     # Convertim timestamp-ul într-o dată și oră în format standard
